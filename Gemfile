@@ -19,7 +19,7 @@ gem 'foundation-rails'
 
 gem 'sorcery'
 
-gem 'compass'
+gem 'compass-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
