@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
-//= require foundation_and_overrides
-
  *= require foundation_and_overrides
-/*= require foundation
  */
+
+@import "compass";
+
+@import "your_project/mixins";
+@import "your_project/base";
