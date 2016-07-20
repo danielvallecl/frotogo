@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-yelp_seeds = Yelp.client.search('Toronto', { term: 'ice-cream'}).businesses
+yelp_seeds = Yelp.client.search('Toronto', { term: 'ice-cream', sort: 0, }).businesses
 
 yelp_seeds.each do |seed|
   Store.create(image_url: seed.image_url)
