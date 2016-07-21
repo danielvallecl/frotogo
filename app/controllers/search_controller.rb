@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    @results = Store.all
+    @stores = Store.all
   end
 
   def new

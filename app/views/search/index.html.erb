@@ -1,11 +1,11 @@
 <h1>Frotogo</h1>
 
-<% @results.each do |result| %>
-  <h2><%= result.name %> </h2> <br />
-  <h3><%= result.display_phone %></h3>
+<% @stores.each do |store| %>
+  <h2><%= store.name %> </h2> <br />
+  <h3><%= store.display_phone %></h3>
 
-  <img src="<%= result.image_url %>"
+  <img src="<%= store.image_url %>"
   </br>
-  <img src="<%= result.rating_img_url %>">
+  <img src="<%= store.rating_img_url %>">
 
 <%end %>
