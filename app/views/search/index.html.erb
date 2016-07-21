@@ -2,14 +2,10 @@
 
 <% @results.each do |result| %>
   <h2><%= result.name %> </h2> <br />
-  <h3><%= result.snippet_text %></h3>
-  <h3><%= result.location.coordinate.latitude%> + <%=result.location.coordinate.longitude %></h3>
-  <h3><%= result.location.address%>, <%= result.location.city %></h3>
   <h3><%= result.display_phone %></h3>
 
   <img src="<%= result.image_url %>"
   </br>
-  <h3><%= result.rating %></h3>
-  <img src="<%= result.rating_img_url_large %>">
+  <img src="<%= result.rating_img_url %>">
 
 <%end %>

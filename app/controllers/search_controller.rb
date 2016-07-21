@@ -1,11 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    # offset = 0
-    # while offset <= 200 do
-      @results= Yelp.client.search('Toronto', { term: 'ice-cream', offset: 0}).businesses
-    #   offset += 20
-    # end
+    @results = Store.all
   end
 
   def new
