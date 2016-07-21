@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721210427) do
+ActiveRecord::Schema.define(version: 20160721231212) do
 
   create_table "stores", force: :cascade do |t|
     t.string  "name"
     t.string  "image_url"
-    t.integer "display_phone"
+    t.string  "display_phone"
     t.integer "review_count"
     t.string  "location_address"
     t.string  "location_city"
