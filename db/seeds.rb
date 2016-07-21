@@ -8,7 +8,7 @@
 
 offset = 0
 
-while offset <= 2000 do
+while offset <= 4000 do
   yelp_seeds = Yelp.client.search('Toronto', {term: 'ice-cream', offset: offset}).businesses
   yelp_seeds.each do |seed|
     next if seed.location.coordinate == nil
