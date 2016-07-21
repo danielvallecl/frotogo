@@ -6,8 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-yelp_seeds = Yelp.client.search('Toronto', {term: 'ice-cream', offset: 20}).businesses
+offset = 0
 
-yelp_seeds.each do |seed|
-  Store.create(name: seed.name, image_url: seed.image_url, url: seed.url, display_phone: seed.display_phone, review_count: seed.review_count, location_address: seed.location.address, location_city: seed.location.city, rating_img_url: seed.rating_img_url, location_neighborhoods: seed.location.neighborhoods)
+while offset <= 200 do
+  yelp_seeds = Yelp.client.search('Toronto', {term: 'ice-cream', offset: offset}).businesses
+  yelp_seeds.each do |seed|
+    Store.create(name: seed.name, image_url: seed.image_url, url: seed.url, display_phone: seed.display_phone, review_count: seed.review_count, location_address: seed.location.address, location_city: seed.location.city, rating_img_url: seed.rating_img_url, location_neighborhoods: seed.location.neighborhoods)
+  end
+  offset += 20
 end
