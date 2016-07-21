@@ -4,9 +4,8 @@ class SearchController < ApplicationController
     @stores = Store.all
   end
 
-  def new
+  def show
+    @stores = Store.find(params[:id])
   end
-
-  def edit
-  end
+  
 end
