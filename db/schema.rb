@@ -14,19 +14,17 @@
 ActiveRecord::Schema.define(version: 20160721192604) do
 
   create_table "stores", force: :cascade do |t|
-    t.string   "name"
-    t.string   "image_url"
-    t.string   "url"
-    t.integer  "display_phone"
-    t.integer  "review_count"
-    t.string   "location_address"
-    t.string   "location_city"
-    t.string   "rating_img_url"
-    t.string   "location_neighborhoods"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.decimal  "longitude"
-    t.decimal  "latitude"
+    t.string  "name"
+    t.string  "image_url"
+    t.integer "display_phone"
+    t.integer "review_count"
+    t.string  "location_address"
+    t.string  "location_city"
+    t.string  "rating_img_url"
+    t.text    "description"
+    t.string  "location_neighborhoods"
+    t.decimal "longitude"
+    t.decimal "latitude"
   end
 
 end
