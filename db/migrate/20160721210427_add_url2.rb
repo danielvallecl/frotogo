@@ -1,4 +1,4 @@
-class AddLocationtoStores < ActiveRecord::Migration
+class AddUrl2 < ActiveRecord::Migration
   def up
     add_column :stores, :url, :string
   end
@@ -6,5 +6,4 @@ class AddLocationtoStores < ActiveRecord::Migration
   def down
     drop_column :stores, :url, :string
   end
-
 end
