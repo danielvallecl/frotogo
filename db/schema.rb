@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720202210) do
+ActiveRecord::Schema.define(version: 20160721002616) do
 
   create_table "stores", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "image_url"
+    t.string   "url"
+    t.integer  "display_phone"
+    t.integer  "review_count"
+    t.string   "location_address"
+    t.string   "location_city"
+    t.string   "rating_img_url"
+    t.string   "location_neighborhoods"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
