@@ -1,20 +1,12 @@
 
 function initMap() {
 
-  var mapPlaceholder = $('#map');
+  include_map = $('#map')
+  lat = include_map.data('latitude')
+  lng = include_map.data('longitude')
 
-	var latLong = { lat: mapPlaceholder.data('latitude'), lng: mapPlaceholder.data('longitude') };
-
-  var map = new google.maps.Map(mapPlaceholder[0], {
-    center: latLong,
-    zoom: 16
+  map = new google.maps.Map(include_map[0], {
+    center: {lat: lat, lng: lng},
+    zoom: 18
   });
-
-	var restaurantName = mapPlaceholder.data('name')
-
-	var marker = new google.maps.Marker({
-	  position: latLong,
-	  map: map,
-	  title: restaurantName
-	});
 }
