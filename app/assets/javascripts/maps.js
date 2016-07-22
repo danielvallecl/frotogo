@@ -11,9 +11,20 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({
-    position: myLatLng,
     map: map,
+    draggable: true,
+    position: myLatLng,
+    animation: google.maps.Animation.DROP,
     title: include_map.data('name')
   });
+  marker.addListener('click', toggleBounce);
+}
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
 
 }
