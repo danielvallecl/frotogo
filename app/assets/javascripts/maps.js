@@ -1,12 +1,19 @@
 
 function initMap() {
 
-  include_map = $('#map')
-  lat = include_map.data('latitude')
-  lng = include_map.data('longitude')
+  var include_map = $('#map')
 
-  map = new google.maps.Map(include_map[0], {
-    center: {lat: lat, lng: lng},
-    zoom: 18
+  var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
+
+  var map = new google.maps.Map(include_map[0], {
+    center: myLatLng,
+    zoom: 15
   });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Store',
+  });
+
 }
