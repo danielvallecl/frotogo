@@ -13,7 +13,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Store',
+    title: include_map.data('name')
   });
 
 }
