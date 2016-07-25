@@ -14,6 +14,7 @@ function initMap() {
     draggable: true,
     position: myLatLng,
     animation: google.maps.Animation.DROP,
+    icon: "/assets/icecreampin.png",
     title: include_map.data('name')
   });
   marker.addListener('click', toggleBounce);
