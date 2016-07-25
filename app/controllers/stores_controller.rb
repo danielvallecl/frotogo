@@ -8,6 +8,9 @@ class StoresController < ApplicationController
     @menchies = Store.where("name like ?", "%Menchie%")
     @laura_secord = Store.where("name like ?", "%Secord%")
     @yogurtys = Store.where("name like ?", "%Yogurty%")
+
+    gon.stores = @stores
+    gon.baskin_robbins = @baskin_robbins
   end
 
   def show

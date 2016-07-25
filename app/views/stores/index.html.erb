@@ -1,11 +1,13 @@
 <h1>Frotogo</h1>
 
+<div id="map" data-latitude="43.6426" data-longitude="-79.3871" >
+
+</div>
 
 <% @stores.each do |store| %>
   <div class="frotogo_stores" id= "storeId-<%=store.id %>" data-name = "<%= store.name %>" data-latitude= <%= store.latitude %> data-longitude= <%= store.longitude %>
   <h2><%= store.name %> </h2> <br />
   <h3><%= store.display_phone %></h3>
-
 
   <img src="<%= store.image_url %>"
   </br>

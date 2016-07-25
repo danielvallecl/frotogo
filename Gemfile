@@ -23,7 +23,7 @@ gem 'compass-rails'
 
 gem 'yelp'
 
-gem 'gmaps4rails'
+gem 'gon'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

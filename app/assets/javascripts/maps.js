@@ -3,7 +3,7 @@
 
 function initMap() {
 
-  var include_map = $('#map_show')
+  var include_map = $('#map')
   var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
 
   var map = new google.maps.Map(include_map[0], {
@@ -31,18 +31,3 @@ function toggleBounce() {
 }
 
 //  JS for Index Page Map //
-
-var query = $(".frotogo_stores")
-var queries = {name: include_query.data('name'), lat: include_query.data('latitude'), lng: include_query.data('longitude')}
-
-for( i = 0; i < query.length; i++ ) {
-      var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-      bounds.extend(position);
-      marker = new google.maps.Marker({
-          position: queries,
-          map: map,
-          title: include_query.data('name')
-          animation: google.maps.Animation.DROP,
-      });
-      marker.addListener('click', toggleBounce);
-    }
