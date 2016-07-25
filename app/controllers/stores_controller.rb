@@ -2,15 +2,16 @@ class StoresController < ApplicationController
 
   def index
     @stores = Store.all
-  end
-
-  def show
-    @store = Store.find(params[:id])
     @baskin_robbins = Store.where("name like ?", "%Baskin%")
     @dairy_queen = Store.where("name like ?", "%Dairy Queen%")
     @yogen_fruz = Store.where("name like ?", "%Yogen%")
     @menchies = Store.where("name like ?", "%Menchie%")
+    @laura_secord = Store.where("name like ?", "%Secord%")
+    @yogurtys = Store.where("name like ?", "%Yogurty%")
+  end
 
+  def show
+    @store = Store.find(params[:id])
   end
 
   private

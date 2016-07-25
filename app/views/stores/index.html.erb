@@ -1,11 +1,14 @@
 <h1>Frotogo</h1>
 
+
 <% @stores.each do |store| %>
+  <div class="frotogo_stores" id= "storeId-<%=store.id %>" data-name = "<%= store.name %>" data-latitude= <%= store.latitude %> data-longitude= <%= store.longitude %>
   <h2><%= store.name %> </h2> <br />
   <h3><%= store.display_phone %></h3>
+
 
   <img src="<%= store.image_url %>"
   </br>
   <img src="<%= store.rating_img_url %>">
-
+</div>
 <%end %>
