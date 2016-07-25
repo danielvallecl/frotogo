@@ -5,6 +5,14 @@
 
 </div>
 
+
+<% @baskin_robbins.each do |baskin| %>
+<h1><%= baskin.longitude  %></h1>
+<h1><%= baskin.latitude  %></h1>
+<% end %>
+
+
+
   <h2><%= @store.name %> </h2> <br />
 
   <h3><%= @store.display_phone %></h3>
