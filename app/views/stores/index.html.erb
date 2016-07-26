@@ -1,6 +1,6 @@
 <h1>Frotogo</h1>
 
-<div id="map" data-latitude="43.6426" data-longitude="-79.3871" >
+<div id="map" data-name = "<%= @stores[0].name %>" data-latitude= "<%= @stores[0].latitude %>" data-longitude= "<%= @stores[0].longitude %>">
 
 </div>
 
@@ -8,6 +8,8 @@
   <div class="frotogo_stores" id= "storeId-<%=store.id %>" data-name = "<%= store.name %>" data-latitude= <%= store.latitude %> data-longitude= <%= store.longitude %>
   <h2><%= store.name %> </h2> <br />
   <h3><%= store.display_phone %></h3>
+
+  <h3><%= store.location_address %></h3>
 
   <img src="<%= store.image_url %>"
   </br>

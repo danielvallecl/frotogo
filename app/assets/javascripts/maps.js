@@ -1,14 +1,14 @@
 
 //JS for Show Page Map //
 
-function initMap() {
+function initShowMap() {
 
   var include_map = $('#map')
   var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
 
   var map = new google.maps.Map(include_map[0], {
     center: myLatLng,
-    zoom: 15
+    zoom: 0
   });
 
   var marker = new google.maps.Marker({
@@ -29,5 +29,3 @@ function toggleBounce() {
     marker.setAnimation(google.maps.Animation.DROP);
   }
 }
-
-//  JS for Index Page Map //

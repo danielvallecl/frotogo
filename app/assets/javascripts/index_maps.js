@@ -1,30 +1,39 @@
+//  JS for Index Page Map //
 
-var map = new google.maps.Map(include_map[0], {
-  center: myLatLng,
-  zoom: 15
-});
+function initIndexMap() {
 
-var marker = new google.maps.Marker({
-  map: map,
-  draggable: true,
-  position: myLatLng,
-  animation: google.maps.Animation.DROP,
-  icon: "/assets/icecreampin.png",
-  title: include_map.data('name')
-});
-marker.addListener('click', toggleBounce);
-}
+  var include_map = $('#map')
+  var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
 
-for( i = 0; i < gon.baskin_robbins.length; i++ ) {
-      var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-      bounds.extend(position);
-      var latitude = gon.baskin_robbins[i]["latitude"]
-      var longitude = gon.baskin_robbins[i]["longitude"]
-      marker = new google.maps.Marker({
-          position: LatLng,
-          map: map,
-          title:
-          animation: google.maps.Animation.DROP,
-      });
-      marker.addListener('click', toggleBounce);
+  var map = new google.maps.Map(include_map[0], {
+    center: {lat: 43.6709, lng: -79.3859},
+    zoom: 12
+  });
+
+  console.log(gon.baskin_robbins)
+
+  var i = 0
+
+  while (i < gon.baskin_robbins.length) {
+    var myLatLng = { lat: parseFloat(gon.baskin_robbins[i]["latitude"]), lng: parseFloat(gon.baskin_robbins[i]["longitude"]) }
+    // var myLatLng = { lat: 43.6426 , lng: -79.3871 }
+    var marker = new google.maps.Marker({
+      map: map,
+      draggable: true,
+      position: myLatLng,
+      animation: google.maps.Animation.DROP,
+      icon: "/assets/icecreampin.png",
+      title: 'Hello'
+    });
+    marker.addListener('click', toggleBounce);
+    i++
+  }
+
+  function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.DROP);
     }
+  };
+};
