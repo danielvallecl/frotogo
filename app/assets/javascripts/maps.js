@@ -1,5 +1,5 @@
 
-//JS for Show Page Map //
+//JS for Show Page Map which shows an Invididual Map //
 
 function initShowMap() {
 
@@ -8,7 +8,7 @@ function initShowMap() {
 
   var map = new google.maps.Map(include_map[0], {
     center: myLatLng,
-    zoom: 0
+    zoom: 15
   });
 
   var marker = new google.maps.Marker({

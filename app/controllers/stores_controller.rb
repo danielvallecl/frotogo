@@ -15,6 +15,7 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
+    render layout: "showlayout"
   end
 
   private

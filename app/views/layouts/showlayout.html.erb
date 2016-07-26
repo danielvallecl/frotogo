@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "Frotogo" %></title>
+
+    <%= Gon::Base.render_data %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?v=3.23&key=AIzaSyB0Ym_ZexOZYC3qENOj3pzdSchvXb5Ris4&callback=initShowMap", async: true, defer: true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>
