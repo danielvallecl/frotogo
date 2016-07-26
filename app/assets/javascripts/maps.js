@@ -22,6 +22,17 @@ function initShowMap() {
   marker.addListener('click', toggleBounce);
 }
 
+function addMarkerWithTimeout(position, timeout) {
+        window.setTimeout(function() {
+          markers.push(new google.maps.Marker({
+            position: position,
+            map: map,
+            animation: google.maps.Animation.DROP
+          }));
+        }, timeout);
+      }
+
+
 function toggleBounce() {
   if (marker.getAnimation() !== null) {
     marker.setAnimation(null);
