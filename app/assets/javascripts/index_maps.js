@@ -10,35 +10,34 @@ function initIndexMap() {
     zoom: 12
   });
 
-  //Query for the Checkbox//
+  //Query to get information for the Checkbox//
 
-  $(".store_category").on('click', function(){
-    var search_term = ($(this).attr("name"))
-    var search_regex = new RegExp(search_term, "i")
+  $(".store_category").on('click', function(){                //click listener for the Checkbox
+    var search_term = ($(this).attr("name"))                  //this refers to the checkbox itself
+    var search_regex = new RegExp(search_term, "i")           //Created a regular expression to make the string case insensitive
     var query = $.grep(gon.stores, function( store, i ) {
-      return ( store.name.match(search_regex))                //adding Regular Expression to make the query case insensitive
+      return ( store.name.match(search_regex))                //adding Regular Expression
     });
-    console.log(query)
+
+//Iterating over query while populating the map//
+
+    var i = 0
+    while (i < query.length) {
+      var myLatLng = { lat: parseFloat(query[i]["latitude"]), lng: parseFloat(query[i]["longitude"]) }
+      var marker = new google.maps.Marker({
+        map: map,
+        draggable: false,
+        position: myLatLng,
+        animation: google.maps.Animation.DROP,
+        icon: "/assets/icecreampin.png",
+        title: query[i]["name"]
+      });
+      marker.addListener('click', toggleBounce);
+      i++
+    }
   });
 
-
   //Populating the Map with Multiple Icons//
-
-  // var i = 0
-  //
-  // while (i < gon.baskin_robbins.length) {
-  //   var myLatLng = { lat: parseFloat(gon.baskin_robbins[i]["latitude"]), lng: parseFloat(gon.baskin_robbins[i]["longitude"]) }
-  //   var marker = new google.maps.Marker({
-  //     map: map,
-  //     draggable: true,
-  //     position: myLatLng,
-  //     animation: google.maps.Animation.DROP,
-  //     icon: "/assets/icecreampin.png",
-  //     title: 'Hello'
-  //   });
-  //   marker.addListener('click', toggleBounce);
-  //   i++
-  // }
 
   function toggleBounce() {
     if (marker.getAnimation() !== null) {
