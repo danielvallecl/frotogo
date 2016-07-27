@@ -1,4 +1,4 @@
-//  JS for Index Page Map //
+// =========== JS for Index Page Map ========== //
 
 function initIndexMap() {
 
@@ -26,26 +26,36 @@ function initIndexMap() {
 
   //Iterating over query while populating the map//
 
-      var i = 0
-      while (i < query.length) {
-        var myLatLng = { lat: parseFloat(query[i]["latitude"]), lng: parseFloat(query[i]["longitude"]) }
-        var marker = new google.maps.Marker({
-          map: map,
-          draggable: false,
-          position: myLatLng,
-          animation: google.maps.Animation.DROP,
-          icon: "/assets/icecreampin.png",
-          title: query[i]["location_address"]
-        });
-        marker.addListener('click', toggleBounce);
-        window.pins[search_regex].push(marker)
-        i++
-      }
-    } else {
-      window.pins[search_regex].map(function(store) { store.setMap(null) })   //this deletes the pins from the screen
+    var i = 0
+    while (i < query.length) {
+      var myLatLng = { lat: parseFloat(query[i]["latitude"]), lng: parseFloat(query[i]["longitude"]) }
+      var marker = new google.maps.Marker({
+        map: map,
+        draggable: false,
+        position: myLatLng,
+        animation: google.maps.Animation.DROP,
+        icon: "/assets/icecreampin.png",
+        title: query[i]["name"]
+      });
+      marker.addListener('click', toggleBounce);
+      window.pins[search_regex].push(marker)
+      i++
+    }
+  } else {
+    window.pins[search_regex].map(function(store) { store.setMap(null) })   //this deletes the pins from the screen
+  }
+});
+
+//Loop through the object because .map only works on arrays//
+
+  $(".uncheck_all").on('click', function() {
+    for ( var store in window.pins) {
+      window.pins[store].map(function(store) {store.setMap(null)
+      });
     }
   });
-  //Populating the Map with Multiple Icons//
+
+  //Bounce Animation//
 
   function toggleBounce() {
     if (marker.getAnimation() !== null) {
@@ -53,5 +63,5 @@ function initIndexMap() {
     } else {
       marker.setAnimation(google.maps.Animation.DROP);
     }
-  };
+  }
 };
