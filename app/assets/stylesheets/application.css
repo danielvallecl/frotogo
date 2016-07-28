@@ -14,7 +14,7 @@
   border: 2px solid black;
 }
 
-#new_div {
+.new_div {
   display: inline-block;
   margin: 2px 2px 2px 2px;
   float: left;

@@ -39,16 +39,14 @@ function initIndexMap() {
         optimized: false
       });
 
-
         $("#jquery_target").after(
-        '<div id="new_div">' +
+        '<div class="new_div">' +
         '<ul class="store_description">' +
         '<li>Store Name:' + " " + query[i]["name"] + '</li>' +
-        '<li>Address:</li>' + 
+        '<li>Address:</li>' +
         '<li>Phone:</li>' + query[i]["display_phone"].slice(3) +
         '</ul>' +
         '</div>');
-
 
       //Hide the first flash of the icon, then switch to real icon after 150ms
       var changeIcon = function (){
@@ -71,5 +69,10 @@ function initIndexMap() {
       window.pins[store].map(function(store) {store.setMap(null)
       });
     }
+    $(".new_div").remove();
   });
+
+
+
+
 };
