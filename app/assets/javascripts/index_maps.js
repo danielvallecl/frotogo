@@ -12,7 +12,6 @@ function initIndexMap() {
     zoom: 12
   });
 
-
   //Query to get information for the Checkbox//
 
   $(".store_category").on('click', function(){                //click listener for the Checkbox
