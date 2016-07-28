@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'figaro'
 
+gem 'normalize-rails'
+
 gem 'foundation-rails'
 
 gem 'sorcery'

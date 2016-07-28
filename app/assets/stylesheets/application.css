@@ -1,9 +1,26 @@
 
-
 /*=========================================*/
+
+* {
+  list-style: none;
+}
+
+
+
 
 #map {
   height: 500px;
   width: 800px;
   border: 2px solid black;
+}
+
+#new_div {
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
+  float: left;
+  margin: 0 auto;
+  width: 20%;
+  height: 300px;
+  border: 1px solid black;
+  transition: width 2s;
 }
