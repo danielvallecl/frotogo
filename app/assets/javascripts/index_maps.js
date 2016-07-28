@@ -34,11 +34,17 @@ function initIndexMap() {
         draggable: false,
         position: myLatLng,
         animation: google.maps.Animation.DROP,
-        icon: "/assets/icecreampin.png",
-        title: query[i]["name"]
+        icon: "/assets/icecreampintrans.png",
+        title: query[i]["name"],
+        optimized: false
       });
 
-      marker.addListener('click', toggleBounce);
+      //Hide the first flash of the icon, then switch to real icon after 150ms
+      var changeIcon = function (){
+        this.setIcon('/assets/icecreampin.png');
+      }
+      setTimeout(changeIcon.bind(marker), 150);
+
       window.pins[search_regex].push(marker)
       i++
     }
@@ -56,13 +62,5 @@ function initIndexMap() {
     }
   });
 
-  //Bounce Animation//
 
-  function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.DROP);
-    }
-  }
 };
