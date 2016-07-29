@@ -12,10 +12,11 @@ function initShowMap() {
   });
 
   var include_map = $('#map')
-  var contentString = include_map.data('name')
+  var contentData = include_map.data('name') + "</br> " + include_map.data('location')
+
 
   var infowindow = new google.maps.InfoWindow({
-    content: contentString
+    content: contentData,
   });
 
   var marker = new google.maps.Marker({
@@ -47,4 +48,5 @@ function addMarkerWithTimeout(position, timeout) {
         animation: google.maps.Animation.DROP
       }));
     }, timeout);
+
   };

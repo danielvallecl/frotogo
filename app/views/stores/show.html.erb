@@ -1,11 +1,12 @@
 
 <h1>Frotogo</h1>
 
-<div id="map" data-name = "<%= @store.name %>" data-latitude= <%= @store.latitude %> data-longitude= <%= @store.longitude %> >
+<div id="map" data-name = "<%= @store.name %>" data-latitude= <%= @store.latitude %> data-longitude= <%= @store.longitude %> data-location= <%= @store.location_address %> >
 
 </div>
 
   <h2><%= @store.name %> </h2> <br/>
+  <h2><%= @store.location_address %></h2>
 
   <h3><%= @store.display_phone %></h3>
 

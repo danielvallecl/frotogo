@@ -73,7 +73,8 @@ function initIndexMap() {
     $(".new_div").remove();
   });
 
-
-
-
 };
+
+
+
+//RegEx Function to Clean Dirty Characters//
