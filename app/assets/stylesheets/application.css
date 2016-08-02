@@ -63,12 +63,11 @@
 }
 
 #logo {
-  position: relative;
+  display: none;
   font-size: 3.5em;
   display: inline-block;
   color: white;
   font-family: 'Raleway';
-  display: inline;
   opacity: 1;
   text-shadow: 0.5px 0.5px 1px #000000;
   opacity: 1;
@@ -79,4 +78,12 @@
 
 .store_detail h1 {
   font-size: 2.5em;
+}
+
+
+/*=================SHOW PAGE STYLING================*/
+
+#phone {
+  color: white;
+  font-size: 4em;
 }
