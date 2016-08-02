@@ -1,13 +1,17 @@
 
-  <div><h1>Frotogo</h1></div>
-  <br>
-  <br>
+<header class="show_header">
+</header>
 
-  <div class="storedetail">
+<div class="logo_container">
+
+<a href=# id="logo">FROTOGO</a>
+</div>
+
+  <div class="store_detail">
     <img src="<%= @store.image_url %>" id="storeimage">
     <h1><%= @store.name %></h1>
     <p><%= @store.location_address %>, <%= @store.location_city %></p>
-    <p><%= @store.display_phone %></p>
+    <p><a href="tel:<%= @store.display_phone %>"></p>
     <p><small><img src="<%= @store.rating_img_url %>"> <%= @store.review_count %> reviews on Yelp</small></p>
     <p><a href = <%= @store.url %> >Website</a></p>
 

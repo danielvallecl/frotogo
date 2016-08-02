@@ -14,9 +14,19 @@
  *= require_self
  */
 
- * {
+ /*==========LOADING FONTS============*/
+
+ @import url(https://fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Hammersmith+One|Julius+Sans+One);
+
+ /*===================================*/
+  html {
+ font-size: 62.5%;
+ }
+
+ body {
    list-style: none;
    text-decoration: none;
+   background-color: #079abc;
  }
 
  .new_div {
@@ -28,3 +38,45 @@
    height: 300px;
    border: 1px solid black;
    transition: width 2s;
+ }
+
+/*=============SHOW PAGE============*/
+
+.show_header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+	-webkit-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-moz-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-o-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-ms-filter: blur(8px) contrast(0.4) brightness(1.4);
+	clip: rect(520px 573px 516px 351px);
+	transition: all 0.5s ease-in-out;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.logo_container {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+#logo {
+  position: relative;
+  font-size: 3.5em;
+  display: inline-block;
+  color: white;
+  font-family: 'Raleway';
+  display: inline;
+  opacity: 1;
+  text-shadow: 0.5px 0.5px 1px #000000;
+  opacity: 1;
+  user-select: none;
+  transition: 0.2s;
+  -webkit-user-select: none;
+}
+
+.store_detail h1 {
+  font-size: 2.5em;
+}
