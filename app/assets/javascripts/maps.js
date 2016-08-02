@@ -14,7 +14,6 @@ function initShowMap() {
   var include_map = $('#map')
   var contentData = include_map.data('name') + "</br> " + include_map.data('location')
 
-
   var infowindow = new google.maps.InfoWindow({
     content: contentData,
   });

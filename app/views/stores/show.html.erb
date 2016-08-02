@@ -1,15 +1,18 @@
 
-<h1>Frotogo</h1>
+  <div><h1>Frotogo</h1></div>
+  <br>
+  <br>
 
-<div id="map" data-name = "<%= @store.name %>" data-latitude= <%= @store.latitude %> data-longitude= <%= @store.longitude %> data-location= <%= @store.location_address %> >
+  <div class="storedetail">
+    <img src="<%= @store.image_url %>" id="storeimage">
+    <h1><%= @store.name %></h1>
+    <p><%= @store.location_address %>, <%= @store.location_city %></p>
+    <p><%= @store.display_phone %></p>
+    <p><small><img src="<%= @store.rating_img_url %>"> <%= @store.review_count %> reviews on Yelp</small></p>
+    <p><a href = <%= @store.url %> >Website</a></p>
 
-</div>
+  </div>
 
-  <h2><%= @store.name %> </h2> <br/>
-  <h2><%= @store.location_address %></h2>
+  <div id="map" data-name = "<%= @store.name %>" data-latitude= <%= @store.latitude %> data-longitude= <%= @store.longitude %> data-location= <%= @store.location_address %> >
 
-  <h3><%= @store.display_phone %></h3>
-
-  <img src="<%= @store.image_url %>"
-  </br>
-  <img src="<%= @store.rating_img_url %>">
+  </div>

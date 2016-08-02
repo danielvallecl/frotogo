@@ -74,7 +74,3 @@ function initIndexMap() {
   });
 
 };
-
-
-
-//RegEx Function to Clean Dirty Characters//

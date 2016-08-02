@@ -1,17 +1,197 @@
-<h1>Frotogo</h1>
-
-<div id="map">
+<div class="biglogo">
+  <img src="/assets/frotogo.png"/>
 </div>
 
-<br />
 
-<label><input class="store_category" type="checkbox" name="baskin" value="Baskin Robbins">Baskin Robbins</label>
+<div class="search_box_caption">
+  <h4><b>Seek out the frozen treats you crave<br>with Toronto's Coolest Website...</b></h4>
+</div>
+<div class="search_box">
+<ul class="accordion" data-accordion data-allow-all-closed="true">
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title cat1" id="cat1"><b>Ice Cream</b></a>
+    <div class="accordion-content boxtab" data-tab-content>
+      <ul>
+        <li>
+        <input type="checkbox" name="all" id="all" />
+        <label for='all'><b>Select All</b></label>
+          <ul>
+            <li class="small-6 large-3 columns" id="test">
+              <input type="checkbox" class="store_category" name="baskin" id="box_1" value="1" />
+              <label for="box_1">Baskin-Robbins</label>
+            </li>
+            <li>
+              <input type="checkbox" class="store_category" name="laura secord" id="box_2" value="2" /> <label for="box_2">Laura Secord</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_3" value="3" /> <label for="box_3">Marble Slab Creamery</label>
+            </li>
+            <li>
+              <input type="checkbox" class="store_category" name="selected[]" id="box_4" value="4" /> <label for="box_4">Ed's Real Scoop</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_5" value="5" /> <label for="box_5">Sweet Olenka's</label>
+            </li>
+            <li>
+              <input type="checkbox" class="store_category" name="selected[]" id="box_6" value="6" /> <label for="box_6">Greg's Ice Cream</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_7" value="7" /> <label for="box_7">Dutch Dreams</label>
+            </li>
+            <li>
+              <input type="checkbox" class="store_category" name="selected[]" id="box_8" value="8" /> <label for="box_8">Big Chill</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </li>
 
-<label><input class="store_category" type="checkbox" name="dairy" value="Dairy Queen">Dairy Queen</label>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title cat2"><b>Soft Serve &amp; Frozen Yogurt</b></a>
+    <div class="accordion-content boxtab" data-tab-content>
+      <ul>
+        <li>
+        <input type="checkbox" name="all" id="all" />
+        <label for='all'><b>Select All</b></label>
+          <ul>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" class="store_category" name="dairy queen" id="box_1b" value="1b" /> <label for="box_1b">Dairy Queen</label>
+            </li>
+            <li>
+              <input type="checkbox" name="selected[]" id="box_2b" value="2b" />
+              <label for="box_2b">Yogurty's</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" name="selected[]" id="box_3b" value="3b" />
+              <label for="box_3b">Yogen Fruz</label>
+            </li>
+            <li>
+              <input type="checkbox" name="selected[]" id="box_4b" value="4b" />
+              <label for="box_4b">Menchie's</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" name="selected[]" id="box_5b" value="5b" /> <label for="box_5b">Sweet Jesus</label>
+            </li>
+            <li>
+              <input type="checkbox" name="selected[]" id="box_6b" value="6b" />
+              <label for="box_6b">Tom's Dairy Freeze</label>
+            </li>
+            <li class="small-6 large-3 columns">
+              <input type="checkbox" name="selected[]" id="box_7b" value="7b" />
+              <label for="box_7b">Cosmic Treats</label>
+            </li>
+            <li>
+              <input type="checkbox" name="selected[]" id="box_8b" value="8b" />
+              <label for="box_8b">The Red Bench</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </li>
 
-<label><input class="uncheck_all" type="checkbox" value="uncheck all">Uncheck All</label>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title cat3"><b>Gelato</b></a>
+    <div class="accordion-content boxtab" data-tab-content>
+      <ul>
+        <li>
+        <input type="checkbox" name="all" id="all" />
+        <label for='all'><b>Select All</b></label>
+          <ul>
+        <li class="small-6 large-3 columns">
+          <input type="checkbox" name="selected[]" id="box_1c" value="1c" />
+          <label for="box_1c">G for Gelato</label>
+        </li>
+        <li>
+          <input type="checkbox" name="selected[]" id="box_2c" value="2c" />
+          <label for="box_2c">00 Gelato</label>
+        </li>
+        <li class="small-6 large-3 columns">
+          <input type="checkbox" name="selected[]" id="box_3c" value="3c" />
+          <label for="box_3c">Hollywood Gelato</label>
+        </li>
+        <li>
+          <input type="checkbox" name="selected[]" id="box_4c" value="4c" />
+          <label for="box_4c">Froshberg Gelato</label>
 
-<br />
+        </li>
+        <li class="small-6 large-3 columns">
+          <input type="checkbox" name="selected[]" id="box_5c" value="5c" />
+          <label for="box_5c">Dolce Gelato</label>
+        </li>
+        <li>
+          <input type="checkbox" name="selected[]" id="box_6c" value="6c" />
+          <label for="box_6c">Kekou Gelato House</label>
+        </li>
+        <li class="small-6 large-3 columns">
+          <input type="checkbox" name="selected[]" id="box_7c" value="7c" />
+          <label for="box_7c">Hotel Gelato</label>
+        </li>
+        <li>
+          <input type="checkbox" name="selected[]" id="box_8c" value="8c" />
+          <label for="box_8c">Boreal Gelato</label>
+        </li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title cat4"><b>Other Frozen Treats</b></a>
+    <div class="accordion-content" data-tab-content style="width: 95%; border-radius: 5px; margin: -8px 0 5px 15px; border: 1px solid #66A29D;">
+      <ul>
+        <li>
+        <input type="checkbox" name="all" id="all" />
+        <label for='all'><b>Select All</b></label>
+        <ul>
+          <li class="small-6 large-3 columns">
+            <input type="checkbox" name="selected[]" id="box_1d" value="1d" />
+            <label for="box_1d">Sweet Sammies</label>
+          </li>
+          <li>
+            <input type="checkbox" name="selected[]" id="box_2d" value="2d" />
+            <label for="box_2d">Scoop Shop</label>
+          </li>
+          <li class="small-6 large-3 columns">
+            <input type="checkbox" name="selected[]" id="box_3d" value="3d" />
+            <label for="box_3d">Bang Bang</label>
+          </li>
+          <li>
+            <input type="checkbox" name="selected[]" id="box_4d" value="4d" />
+            <label for="box_4d">Booyah</label>
+          </li>
+          <li class="small-6 large-3 columns">
+            <input type="checkbox" name="selected[]" id="box_1d" value="1d" />
+            <label for="box_1d">Sweet Sammies</label>
+          </li>
+          <li>
+            <input type="checkbox" name="selected[]" id="box_2d" value="2d" />
+            <label for="box_2d">Andrea's Bakery</label>
+          </li>
+          <li class="small-6 large-3 columns">
+            <input type="checkbox" name="selected[]" id="box_3d" value="3d" />
+            <label for="box_3d">The Dirty Bird</label>
+          </li>
+          <li>
+            <input type="checkbox" name="selected[]" id="box_4d" value="4d" />
+            <label for="box_4d">Holy Chuck</label>
+          </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </li>
+  </ul>
+</div>
+
+<!-- <div class="list_jump">
+  <h1>search items:</h1>
+</div> -->
+<br /> <br />
+
+<div id="map"> </div>
 
 <br />
 
