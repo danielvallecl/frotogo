@@ -3,7 +3,7 @@
 
   <div class="store_detail">
     <img src="<%= @store.image_url %>" id="storeimage">
-    <h1><%= @store.name %></h1>
+    <h1><%= @store.name.titleize %></h1>
     <p><%= @store.location_address %>, <%= @store.location_city %></p>
     <p><a href="tel:<%= @store.display_phone %>" id="phone"><%= @store.display_phone[3..-1]%></a></p>
     <p><small><img src="<%= @store.rating_img_url %>"> <%= @store.review_count %> reviews on Yelp</small></p>
