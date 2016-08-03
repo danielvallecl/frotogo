@@ -7,5 +7,3 @@ $( document ).ready(function() {
     document.getElementById('logo_div').className = 'slideDown';
   }, 0);
 });
-
-//Removes first 3 letters from phone number//

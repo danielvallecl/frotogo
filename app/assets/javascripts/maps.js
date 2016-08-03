@@ -3,7 +3,7 @@
 
 function initShowMap() {
 
-  var include_map = $('#map')
+  var include_map = $("#map_show")
   var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
 
   var map = new google.maps.Map(include_map[0], {
@@ -11,7 +11,7 @@ function initShowMap() {
     zoom: 15
   });
 
-  var include_map = $('#map')
+  var include_map = $("#map_show")
   var contentData = include_map.data('name') + "</br> " + include_map.data('location')
 
   var infowindow = new google.maps.InfoWindow({
