@@ -4,7 +4,7 @@
 
 $( document ).ready(function() {
   setTimeout(function() {
-    document.getElementById('test').className = 'slideDown';
+    document.getElementById('logo_div').className = 'slideDown';
   }, 0);
 });
 
