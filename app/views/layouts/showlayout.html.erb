@@ -26,15 +26,19 @@
     <%= yield %>
 
   <footer>
+    <div class="center_logo">
+    <%= link_to "FROTOGO", root_path, id: "logo_bottom" %>
+    </div>
+
     <p>© 2016 Frotogo Ltd.</p>
+
     <div class="footer_menu">
       <ul>
         <li><%= link_to "FAQ", stores_faq_path %></li>
         <li><%= link_to "About", stores_about_path %></li>
-
       </ul>
-
     </div>
+
   </footer>
 
   </body>
