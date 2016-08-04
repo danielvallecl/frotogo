@@ -5,7 +5,8 @@
 
 /*===================================*/
 html {
-font-size: 62.5%;
+  font-size: 62.5%;
+  background: linear-gradient(#ffb6c1, #ffe9ec);
 }
 
 body {
@@ -193,11 +194,35 @@ footer p {
 }
 
 #logo_bottom:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .center_logo {
   position: relative;
   top: 50%;
   text-align: center;
+}
+
+.footer_menu {
+  float: right;
+  text-align: right;
+  bottom: 10%;
+  position: relative;
+  right: 3%;
+}
+
+.footer_menu a {
+  color: white;
+  font-size: 1.6em;
+  opacity: 0.8;
+}
+
+#yelp {
+  height: 50%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#yelp:hover, #yelp:focus {
+  filter: none;
 }

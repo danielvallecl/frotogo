@@ -43,7 +43,7 @@ function initIndexMap() {
         '<div class="new_div">' +
         '<ul class="store_description">' +
         '<li>Store Name:' + " " + query[i]["name"] + '</li>' +
-        '<li>Address:</li>' + query[i]["location_address"].replace(/[|[[\]&;$%@/"<>()+,]/g, "") +
+        '<li>Address:</li>' + query[i]["location_address"] +
         '<li>Phone:</li>' + query[i]["display_phone"].replace("+1-", "") +
         '<li>Rating:</li> <img src=' + query[i]["rating_img_url"] + '>' +
         '</ul>' +
