@@ -1,17 +1,20 @@
 
-  <div class="store_detail">
+  <div class="store_container store_div">
     <img src="<%= @store.image_url %>" id="storeimage">
+
     <h1><%= @store.name.titleize %></h1>
+
     <p class="address"><%= @store.location_address %>, <%= @store.location_city %></p>
+
     <p><a href="tel:<%= @store.display_phone %>" id="phone">
-    <% if @store.display_phone != nil %>
-    <%= @store.display_phone[3..-1] %>
-    <% else %>
-    <% end %>
+      <% if @store.display_phone != nil %>
+      <%= @store.display_phone[3..-1] %>
+      <% else %>
+      <% end %>
     </a></p>
     <p><img src="<%= @store.rating_img_url %>"> <a href="<%= @store.url %>" target="_blank"> <%= @store.review_count %> reviews on Yelp </a>
-  </div>
 
   <div id="map_show" data-name = "<%= @store.name %>" data-latitude= "<%= @store.latitude %>" data-longitude= "<%= @store.longitude %>" data-location= "<%= @store.location_address %>" >
+  </div>
 
   </div>

@@ -3,6 +3,7 @@
 function initIndexMap() {
 
   window.pins = {};
+  window.marker_array = [];
 
   var include_map = $('#map')
   var myLatLng = { lat: include_map.data('latitude'), lng: include_map.data('longitude') }
@@ -36,7 +37,22 @@ function initIndexMap() {
         animation: google.maps.Animation.DROP,
         icon: "/assets/icecreampintrans.png",
         title: query[i]["name"],
-        optimized: false
+        optimized: false,
+      });
+
+      var windowContent = query[i]['name'] + "</br> " + query[i]["location_address"];
+      var infoWindow = new google.maps.InfoWindow({
+        position: myLatLng,
+        content: windowContent
+      });
+
+      window.marker_array.push({marker: marker, infoWindow: infoWindow})
+      marker.addListener('click', function() {
+        for (var i = 0; i < window.marker_array.length; i++) {
+          if (window.marker_array[i].marker == this) {
+          window.marker_array[i].infoWindow.open(map, window.marker_array[i].marker)
+          }
+        };
       });
 
         $("#jquery_target").after(
@@ -44,7 +60,7 @@ function initIndexMap() {
         '<ul class="store_description">' +
         '<li>Store Name:' + " " + query[i]["name"] + '</li>' +
         '<li>Address:</li>' + query[i]["location_address"] +
-        '<li>Phone:</li>' + query[i]["display_phone"].replace("+1-", "") +
+        '<li>Phone:</li>' + query[i]["display_phone"] +
         '<li>Rating:</li> <img src=' + query[i]["rating_img_url"] + '>' +
         '</ul>' +
         '</div>');
@@ -58,6 +74,7 @@ function initIndexMap() {
       window.pins[search_regex].push(marker)
       i++
     }
+
   } else {
     window.pins[search_regex].map(function(store) { store.setMap(null) })   //this deletes the pins from the screen
   }
@@ -72,5 +89,6 @@ function initIndexMap() {
     }
     $(".new_div").remove();
   });
-
 };
+
+//Adds InfoWindows to every Marker//
