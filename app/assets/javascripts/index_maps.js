@@ -40,7 +40,7 @@ function initIndexMap() {
         optimized: false,
       });
 
-      var windowContent = query[i]['name'] + "</br> " + query[i]["location_address"];
+      var windowContent = `</br> <a href="/stores/${query[i]['id']}"> ${query[i]['name']} </a>  </br> ${query[i]['location_address']}`
       var infoWindow = new google.maps.InfoWindow({
         position: myLatLng,
         content: windowContent

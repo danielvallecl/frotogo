@@ -104,7 +104,7 @@ ul, li {
 
 #logo {
  display: none;
- font-size: 4em;
+ font-size: 4.5em;
  display: inline-block;
  color: white;
  font-family: 'Raleway';
@@ -120,13 +120,21 @@ ul, li {
  font-size: 2.5em;
 }
 
-/*=================SHOW PAGE STYLING================*/
+/*=================SHOW PAGE CONTAINER================*/
 
 .store_container {
   width: 65%;
-  height: 50%;
+  height: 60%;
   margin: 0 auto;
-  background: hsla(0,0%,100%,.3);
+  border-radius: 10px;
+  background-color: #81d8d0;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.store_container h1 {
+  color: white;
 }
 
 #phone {
@@ -150,15 +158,21 @@ ul, li {
  font-size: 2em;
 }
 
-//===============SHOW PAGE MAP==================//
+#store_image {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/*================MAP STYLING====================*/
 
 #map_show {
   height: 90%;
-  width: 55%;
+  width: 50%;
   position: relative;
-  border: 2px solid #999;
+  bottom: 51%;
+  left: 23%;
+  border-radius: 10px;
 }
-
 
 /*===============FOOTER STYLING=================*/
 
@@ -181,7 +195,7 @@ footer p {
 }
 
 #logo_bottom {
-  margin-left: 430px;    /*Find out how to center it correctly */
+  margin-left: 430px;
   margin: 0;
   font-family: 'Raleway';
   font-weight: 600;
@@ -195,7 +209,7 @@ footer p {
 }
 
 #logo_bottom:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .center_logo {
@@ -218,10 +232,14 @@ footer p {
   opacity: 0.8;
 }
 
+.footer_menu a:hover {
+  opacity: 1;
+}
+
 #yelp {
   position: relative;
   right: 40%;
-  bottom: 5%;
+  bottom: 20%;
   height: 30%;
   float: right;
   opacity: 0.6;
@@ -229,7 +247,7 @@ footer p {
 }
 
 #yelp:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #google_maps {
@@ -241,5 +259,5 @@ footer p {
 }
 
 #google_maps:hover, #google_maps:focus {
-  opacity: 0.8;
+  opacity: 0.9;
 }

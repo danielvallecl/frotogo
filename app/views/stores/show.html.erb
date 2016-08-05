@@ -1,8 +1,9 @@
 
-  <div class="store_container store_div">
-    <img src="<%= @store.image_url %>" id="storeimage">
+  <div class="store_container">
 
+  <div class="store_details">
     <h1><%= @store.name.titleize %></h1>
+    <img src="<%= @store.image_url %>" id="store_image">
 
     <p class="address"><%= @store.location_address %>, <%= @store.location_city %></p>
 
@@ -13,6 +14,8 @@
       <% end %>
     </a></p>
     <p><img src="<%= @store.rating_img_url %>"> <a href="<%= @store.url %>" target="_blank"> <%= @store.review_count %> reviews on Yelp </a>
+
+  </div>
 
   <div id="map_show" data-name = "<%= @store.name %>" data-latitude= "<%= @store.latitude %>" data-longitude= "<%= @store.longitude %>" data-location= "<%= @store.location_address %>" >
   </div>
