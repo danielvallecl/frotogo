@@ -1,7 +1,7 @@
 
 /*==========LOADING FONTS============*/
 
-@import url(https://fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Hammersmith+One|Julius+Sans+One);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Hammersmith+One|Poppins);
 
 /*===================================*/
 html {
@@ -135,6 +135,18 @@ ul, li {
 
 .store_container h1 {
   color: white;
+  font-family: Poppins;
+}
+
+.store_details {
+  position: relative;
+  display: inline-block;
+  float: left;
+  left: 1%;
+  top: 1.5%;
+  width: 47%;
+  height: 450px;
+  border-radius: 10px;
 }
 
 #phone {
@@ -148,17 +160,15 @@ ul, li {
  font-weight: bold;
 }
 
-.store_detail {
- width: 50%;
- text-align: center;
- margin: auto;
-}
-
 .address {
  font-size: 2em;
 }
 
 #store_image {
+  position: relative;
+  bottom: 9%;
+  right: 5%;
+  float: right;
   border-radius: 50%;
   border: 2px solid white;
 }
@@ -166,11 +176,14 @@ ul, li {
 /*================MAP STYLING====================*/
 
 #map_show {
-  height: 90%;
+  display: inline-block;
+  float: right;
+  height: 450px;
   width: 50%;
   position: relative;
-  bottom: 51%;
-  left: 23%;
+  top: 1.5%;
+  right: 1%;
+  bottom: 1%;
   border-radius: 10px;
 }
 
@@ -186,6 +199,7 @@ footer {
 }
 
 footer p {
+  display: inline-block;
   position: relative;
   top: 30px;
   left: 5%;
@@ -195,17 +209,19 @@ footer p {
 }
 
 #logo_bottom {
+  display: inline-block;
   margin-left: 430px;
+  bottom: 1px;
   margin: 0;
   font-family: 'Raleway';
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.9em;
   color: #fefcf9;
   text-shadow: 0.5px 0.5px 1px #000000;
   opacity: 0.5;
   transition: 0.2s;
   -webkit-user-select: none;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 #logo_bottom:hover {
@@ -220,16 +236,16 @@ footer p {
 
 .footer_menu {
   float: right;
+  top: 15px;
   text-align: right;
-  bottom: 10%;
   position: relative;
-  right: 3%;
+  left: 5%;
 }
 
 .footer_menu a {
   color: white;
   font-size: 1.6em;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .footer_menu a:hover {
@@ -239,10 +255,11 @@ footer p {
 #yelp {
   position: relative;
   right: 40%;
-  bottom: 6px;
+  top: 27px;
   height: 30%;
   float: right;
   opacity: 0.6;
+  transition: 0.1s;
 }
 
 #yelp:hover {
@@ -252,10 +269,11 @@ footer p {
 #google_maps {
   position: relative;
   right: 50%;
-  top: 3px;
+  top: 35px;
   height: 20%;
   float: right;
   opacity: 0.6;
+  transition: 0.1s;
 }
 
 #google_maps:hover, #google_maps:focus {

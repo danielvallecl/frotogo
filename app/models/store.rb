@@ -3,8 +3,12 @@ class Store < ActiveRecord::Base
 
   before_create :clean_address
 
-  private
 
+  def to_param
+    [id, name.parameterize].join("-")
+  end
+
+  private
   def clean_address
     address = JSON.parse(self.location_address)
     self.location_address = address.first

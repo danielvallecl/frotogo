@@ -5,7 +5,7 @@
     <h1><%= @store.name.titleize %></h1>
     <img src="<%= @store.image_url %>" id="store_image">
 
-    <p class="address"><%= @store.location_address %>, <%= @store.location_city %></p>
+    <p class="address"> <%= @store.location_address %>, <%= @store.location_city %></p>
 
     <p><a href="tel:<%= @store.display_phone %>" id="phone">
       <% if @store.display_phone != nil %>

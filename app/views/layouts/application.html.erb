@@ -8,7 +8,7 @@
     <%= Gon::Base.render_data %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag "https://maps.google.com/maps/api/js?v=3.23&key=AIzaSyB0Ym_ZexOZYC3qENOj3pzdSchvXb5Ris4&callback=initIndexMap", async: true, defer: true %>
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?v=3.23&key=AIzaSyB0Ym_ZexOZYC3qENOj3pzdSchvXb5Ris4&callback=initShowMap", async: true, defer: true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -17,13 +17,33 @@
     <header class="show_header">
     </header>
 
-  <div id="test">
+  <div id="logo_div">
 
     <%= link_to "FROTOGO", root_path, id: "logo" %>
 
   </div>
 
     <%= yield %>
+
+  <footer>
+    <div class="center_logo">
+    <%= link_to "FROTOGO", root_path, id: "logo_bottom" %>
+    </div>
+
+    <p>© 2016 Frotogo Ltd.</p>
+
+    <%= link_to image_tag("yelp_logo", id: "yelp"), "https://www.yelp.ca/" %>
+
+    <%= link_to image_tag("google_maps", id: "google_maps"), "https://www.google.ca/maps" %>
+
+    <div class="footer_menu">
+      <ul>
+        <li><%= link_to "FAQ", stores_faq_path %></li>
+        <li><%= link_to "ABOUT", stores_about_path %></li>
+      </ul>
+    </div>
+
+  </footer>
 
   </body>
 </html>
