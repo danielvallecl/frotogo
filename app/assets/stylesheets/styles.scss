@@ -187,8 +187,8 @@ footer {
 
 footer p {
   position: relative;
-  top: 20%;
-  left: 2%;
+  top: 30px;
+  left: 5%;
   font-size: 1.4em;
   color: white;
   opacity: 0.8;
@@ -239,11 +239,10 @@ footer p {
 #yelp {
   position: relative;
   right: 40%;
-  bottom: 20%;
+  bottom: 6px;
   height: 30%;
   float: right;
   opacity: 0.6;
-  transition: 0.2s;
 }
 
 #yelp:hover {
@@ -253,6 +252,7 @@ footer p {
 #google_maps {
   position: relative;
   right: 50%;
+  top: 3px;
   height: 20%;
   float: right;
   opacity: 0.6;
