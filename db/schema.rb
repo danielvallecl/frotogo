@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725213029) do
+ActiveRecord::Schema.define(version: 20160805231630) do
 
   create_table "stores", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20160725213029) do
     t.datetime "updated_at",             null: false
     t.decimal  "latitude"
     t.decimal  "longitude"
+    t.boolean  "is_closed"
+    t.integer  "rating"
   end
 
 end
