@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805231630) do
+ActiveRecord::Schema.define(version: 20160807215129) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "stores", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160805231630) do
     t.decimal  "longitude"
     t.boolean  "is_closed"
     t.integer  "rating"
+    t.string   "snippet_text"
   end
 
 end

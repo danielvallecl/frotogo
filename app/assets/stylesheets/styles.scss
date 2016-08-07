@@ -1,7 +1,7 @@
 
 /*==========LOADING FONTS============*/
 
-@import url(https://fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Hammersmith+One|Cabin);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Roboto|Cabin);
 
 /*===================================*/
 html {
@@ -33,12 +33,6 @@ ul, li {
 
 /*=============HEADER============*/
 
-.show_header {
- position: relative;
- z-index: 1;
- width: 100%;
- text-align: center;
-}
 
 #logo_div {
  width: 200px;
@@ -116,15 +110,13 @@ ul, li {
  -webkit-user-select: none;
 }
 
-.store_detail h1 {
- font-size: 2.5em;
-}
-
 /*=================SHOW PAGE CONTAINER================*/
 
 .store_container {
-  width: 65%;
-  height: 60%;
+  position: relative;
+  top: 25px;
+  width: 50%;
+  height: 55%;
   margin: 0 auto;
   border-radius: 10px;
   background-color: #81d8d0;
@@ -138,11 +130,11 @@ ul, li {
   position: relative;
   font-size: 5em;
   margin-left: 1%;
-  font-family: 'Cabin';
+  font-family: 'Raleway';
   text-shadow: 0.5px 0.5px 1px #000000;
 }
 
-.store_left {
+.store_title {
   position: relative;
   display: inline-block;
   float: left;
@@ -153,21 +145,38 @@ ul, li {
   border-radius: 10px;
 }
 
+.store_details {
+  height: 68%;
+}
+
+.address {
+ position: absolute;
+ font-size: 2.5em;
+ color: white;
+ font-family: 'Raleway';
+}
+
 #phone {
+ position: absolute;
+ top: 200px;
  color: white;
  font-size: 2em;
- text-decoration: underline;
  transition: 0.2s;
+ text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 
 #phone:hover {
  font-weight: bold;
 }
 
-.address {
- font-size: 2em;
- color: white;
- font-family: 'Raleway';
+.rating {
+  position: absolute;
+  font-size: 2.0em;
+  top: 335px;
+  left: 6%;
+  color: white;
+  font-family: 'Raleway';
+  text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 
 #store_image {
@@ -176,11 +185,18 @@ ul, li {
   right: 5%;
   float: right;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
 }
 
-#rating_image {
-  width: 35%;
+.rating_image {
+  position: absolute;
+  top: 370px;
+  width: 40%;
+  left: 5%;
+}
+
+#rating_number {
+  color: white;
 }
 
 /*================MAP STYLING====================*/
@@ -235,7 +251,7 @@ footer p {
 }
 
 #logo_bottom:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .center_logo {
@@ -249,7 +265,7 @@ footer p {
   top: 15px;
   text-align: right;
   position: relative;
-  left: 5%;
+  right: 5%;
 }
 
 .footer_menu a {
@@ -260,6 +276,15 @@ footer p {
 
 .footer_menu a:hover {
   opacity: 1;
+}
+
+.reviews_yelp {
+  font-size: 1.6em;
+  color: white;
+}
+
+.reviews_yelp:hover {
+  color: #e91e63;
 }
 
 #yelp {
