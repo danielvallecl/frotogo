@@ -4,8 +4,10 @@
 
 
 <div class="search_box_caption">
-  <h4><b>Seek out the frozen treats you crave<br>with Toronto's Coolest Website...</b></h4>
+  <h6><b>Seek out the frozen treats you crave with Toronto's Coolest Website!</b></h6>
 </div>
+<div class="big_box">
+    <h6 style="color:white; text-align:center;"><b>Click on a category below and select some stores...PRESTO!</b></h6>
 <div class="search_box">
 <ul class="accordion" data-accordion data-allow-all-closed="true">
   <li class="accordion-item" data-accordion-item>
@@ -14,38 +16,54 @@
       <ul>
         <li>
         <input type="checkbox" name="all" id="all" />
-        <label for='all'><b>Select All</b></label>
-          <ul>
-            <li class="small-6 large-3 columns" id="test">
-              <input type="checkbox" class="store_category" name="baskin" id="box_1" value="1" />
+        <label for="all"><b>Select All</b></label>
+          <ul class="row">
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_1" value="baskin" />
               <label for="box_1">Baskin-Robbins</label>
             </li>
-            <li>
-              <input type="checkbox" class="store_category" name="baskin" id="box_2" value="2" /> <label for="box_2">Laura Secord</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_2" value="scoop shop" /> <label for="box_2">Scoop Shop</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" class="store_category" name="selected[]" id="box_3" value="3" /> <label for="box_3">Marble Slab Creamery</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_3" value="marble" /> <label for="box_3">Marble Slab Creamery</label>
             </li>
-            <li>
-              <input type="checkbox" class="store_category" name="selected[]" id="box_4" value="4" /> <label for="box_4">Ed's Real Scoop</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_4" value="ed's real" /> <label for="box_4">Ed's Real Scoop</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" class="store_category" name="selected[]" id="box_5" value="5" /> <label for="box_5">Sweet Olenka's</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_5" value="olenka" /> <label for="box_5">Sweet Olenka's</label>
             </li>
-            <li>
-              <input type="checkbox" class="store_category" name="selected[]" id="box_6" value="6" /> <label for="box_6">Greg's Ice Cream</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_6" value="greg" /> <label for="box_6">Greg's Ice Cream</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" class="store_category" name="selected[]" id="box_7" value="7" /> <label for="box_7">Dutch Dreams</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_7" value="dutch" /> <label for="box_7">Dutch Dreams</label>
             </li>
-            <li>
-              <input type="checkbox" class="store_category" name="selected[]" id="box_8" value="8" /> <label for="box_8">Big Chill</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_8" value="big chill" /> <label for="box_8">The Big Chill</label>
+            </li>
+            <li class ="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_9" value="bang" />
+              <label for="box_9">Bang Bang</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_10" value="lickadee" /> <label for="box_10">Lickadee Split</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_11" value="summer's" /> <label for="box_11">Summer's</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_12" value="fugo" /> <label for="box_12">Fugo Desserts</label>
             </li>
           </ul>
         </li>
       </ul>
     </div>
   </li>
+
+
+
 
   <li class="accordion-item" data-accordion-item>
     <a href="#" class="accordion-title cat2"><b>Soft Serve &amp; Frozen Yogurt</b></a>
@@ -54,42 +72,61 @@
         <li>
         <input type="checkbox" name="all" id="all" />
         <label for='all'><b>Select All</b></label>
-          <ul>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" class="store_category" name="dairy queen" id="box_1b" value="1b" /> <label for="box_1b">Dairy Queen</label>
+          <ul class="row">
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category box_1b" name="selected[]" id="box_1b" value="queen" /> <label for="box_1b">Dairy Queen</label>
             </li>
-            <li>
-              <input type="checkbox" name="selected[]" id="box_2b" value="2b" />
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_2b" value="yogurty" />
               <label for="box_2b">Yogurty's</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" name="selected[]" id="box_3b" value="3b" />
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_3b" value="yogen" />
               <label for="box_3b">Yogen Fruz</label>
             </li>
-            <li>
-              <input type="checkbox" name="selected[]" id="box_4b" value="4b" />
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_4b" value="mench" />
               <label for="box_4b">Menchie's</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" name="selected[]" id="box_5b" value="5b" /> <label for="box_5b">Sweet Jesus</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_5b" value="jesus" /> <label for="box_5b">Sweet Jesus</label>
             </li>
-            <li>
-              <input type="checkbox" name="selected[]" id="box_6b" value="6b" />
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_6b" value="freeze" />
               <label for="box_6b">Tom's Dairy Freeze</label>
             </li>
-            <li class="small-6 large-3 columns">
-              <input type="checkbox" name="selected[]" id="box_7b" value="7b" />
-              <label for="box_7b">Cosmic Treats</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_7b" value="roselle" />
+              <label for="box_7b">Roselle Desserts</label>
             </li>
-            <li>
-              <input type="checkbox" name="selected[]" id="box_8b" value="8b" />
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_8b" value="bench" />
               <label for="box_8b">The Red Bench</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_9b" value="momofuku" />
+              <label for="box_9b">Momofuku Milk Bar</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_10b" value="diperie" />
+              <label for="box_10b">La Diperie</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_11b" value="tetsu's japanese che" />
+              <label for="box_11b">Uncle Testu's Matcha</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_12b" value="tsujiri" />
+              <label for="box_12b">Tsujiri</label>
+            </li>
             </li>
           </ul>
         </li>
       </ul>
     </div>
   </li>
+
+
+
 
   <li class="accordion-item" data-accordion-item>
     <a href="#" class="accordion-title cat3"><b>Gelato</b></a>
@@ -98,39 +135,54 @@
         <li>
         <input type="checkbox" name="all" id="all" />
         <label for='all'><b>Select All</b></label>
-          <ul>
-        <li class="small-6 large-3 columns">
-          <input type="checkbox" name="selected[]" id="box_1c" value="1c" />
+          <ul class="row">
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_1c" value="g for" />
           <label for="box_1c">G for Gelato</label>
         </li>
-        <li>
-          <input type="checkbox" name="selected[]" id="box_2c" value="2c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_2c" value="00" />
           <label for="box_2c">00 Gelato</label>
         </li>
-        <li class="small-6 large-3 columns">
-          <input type="checkbox" name="selected[]" id="box_3c" value="3c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_3c" value="hollywood" />
           <label for="box_3c">Hollywood Gelato</label>
         </li>
-        <li>
-          <input type="checkbox" name="selected[]" id="box_4c" value="4c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_4c" value="froshberg" />
           <label for="box_4c">Froshberg Gelato</label>
-
         </li>
-        <li class="small-6 large-3 columns">
-          <input type="checkbox" name="selected[]" id="box_5c" value="5c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_5c" value="dolce g" />
           <label for="box_5c">Dolce Gelato</label>
         </li>
-        <li>
-          <input type="checkbox" name="selected[]" id="box_6c" value="6c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_6c" value="kekou" />
           <label for="box_6c">Kekou Gelato House</label>
         </li>
-        <li class="small-6 large-3 columns">
-          <input type="checkbox" name="selected[]" id="box_7c" value="7c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_7c" value="hotel g" />
           <label for="box_7c">Hotel Gelato</label>
         </li>
-        <li>
-          <input type="checkbox" name="selected[]" id="box_8c" value="8c" />
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_8c" value="boreal" />
           <label for="box_8c">Boreal Gelato</label>
+        </li>
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_9c" value="vizziata" />
+          <label for="box_9c">La Vizziata</label>
+        </li>
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_10c" value="soma" />
+          <label for="box_10c">Soma Chocolatemaker</label>
+        </li>
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_11c" value="paloma" />
+          <label for="box_11c">La Paloma</label>
+        </li>
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_12c" value="grinning" />
+          <label for="box_12c">Grinning Face</label>
         </li>
         </ul>
         </li>
@@ -138,45 +190,39 @@
     </div>
   </li>
 
+
+
   <li class="accordion-item" data-accordion-item>
     <a href="#" class="accordion-title cat4"><b>Other Frozen Treats</b></a>
-    <div class="accordion-content" data-tab-content style="width: 95%; border-radius: 5px; margin: -8px 0 5px 15px; border: 1px solid #66A29D;">
+    <div class="accordion-content boxtab" data-tab-content style="width: 95%; border-radius: 5px; margin: -8px 0 5px 15px; border: 1px solid #66A29D;">
       <ul>
         <li>
         <input type="checkbox" name="all" id="all" />
         <label for='all'><b>Select All</b></label>
-        <ul>
-          <li class="small-6 large-3 columns">
-            <input type="checkbox" name="selected[]" id="box_1d" value="1d" />
+        <ul class="row">
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_1d" value="sammies" />
             <label for="box_1d">Sweet Sammies</label>
           </li>
-          <li>
-            <input type="checkbox" name="selected[]" id="box_2d" value="2d" />
-            <label for="box_2d">Scoop Shop</label>
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_2d" value="bots" />
+            <label for="box_2d">Bakerbots</label>
           </li>
-          <li class="small-6 large-3 columns">
-            <input type="checkbox" name="selected[]" id="box_3d" value="3d" />
-            <label for="box_3d">Bang Bang</label>
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_3d" value="bar ape" />
+            <label for="box_3d">Bar Ape</label>
           </li>
-          <li>
-            <input type="checkbox" name="selected[]" id="box_4d" value="4d" />
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_4d" value="booyah" />
             <label for="box_4d">Booyah</label>
           </li>
-          <li class="small-6 large-3 columns">
-            <input type="checkbox" name="selected[]" id="box_1d" value="1d" />
-            <label for="box_1d">Sweet Sammies</label>
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_5d" value="arctic" />
+            <label for="box_5d">Arctic Bites</label>
           </li>
-          <li>
-            <input type="checkbox" name="selected[]" id="box_2d" value="2d" />
-            <label for="box_2d">Andrea's Bakery</label>
-          </li>
-          <li class="small-6 large-3 columns">
-            <input type="checkbox" name="selected[]" id="box_3d" value="3d" />
-            <label for="box_3d">The Dirty Bird</label>
-          </li>
-          <li>
-            <input type="checkbox" name="selected[]" id="box_4d" value="4d" />
-            <label for="box_4d">Holy Chuck</label>
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_6d" value="baker malt" />
+            <label for="box_6d">Bean &amp; Baker Malt Shop</label>
           </li>
           </ul>
         </li>
@@ -184,15 +230,17 @@
     </div>
   </li>
   </ul>
+  <button class="listjump"><a href="#jquery_target" class="listjumpa">View selections in a list</a></button>
+
+  <button class="mylocator"><img src="/assets/location.png" style="padding-bottom:3px;">&nbsp;Find Me</button>
 </div>
 
-<!-- <div class="list_jump">
-  <h1>search items:</h1>
-</div> -->
-<br /> <br />
 
-<div id="map"> </div>
+<div id="map"></div>
+</div>
 
-<br />
-
-<div id="jquery_target"/></div>
+<div id="jquery_target">
+  <br />
+  <br />
+  <p>Store list...</p>
+</div>

@@ -13,11 +13,55 @@ function initIndexMap() {
     zoom: 12
   });
 
+  //Adds Geolocation Functionality //
+
+  var mymarker = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    animation: google.maps.Animation.DROP,
+    icon: "/assets/person.png",
+    title: "You are here",
+    optimized: false
+  });
+
+  $(".mylocator").on('click', function(){ //click listener for the Geolocation
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        mymarker.setPosition(pos);
+        map.setCenter(pos);
+        map.setZoom(12);
+        map.panTo (pos);
+      }, function() {
+        var infoWindow = new google.maps.InfoWindow({map: map,
+      });
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    }
+    else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'You have blocked your location.' :
+                          "Error: Your browser doesn't support geolocation.");
+  }
+
+
   //Query to get information for the Checkbox//
 
   $(".store_category").on('click', function(){                //click listener for the Checkbox
     console.log($(this).is(':checked'));
-    var search_term = ($(this).attr("name"))                  //this refers to the checkbox itself
+    var search_term = ($(this).attr("value"))                  //this refers to the checkbox itself
     var search_regex = new RegExp(search_term, "i")           //Created a regular expression to make the string case insensitive
     if ($(this).is(':checked')) {                              //Started an if statement
       window.pins[search_regex] = [ ];
@@ -55,6 +99,8 @@ function initIndexMap() {
         };
       });
 
+      //Divs that Appear after Selection//
+
         $("#jquery_target").after(
         '<div class="new_div">' +
         '<ul class="store_description">' +
@@ -90,5 +136,3 @@ function initIndexMap() {
     $(".new_div").remove();
   });
 };
-
-//Adds InfoWindows to every Marker//

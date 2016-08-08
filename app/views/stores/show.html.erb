@@ -10,14 +10,14 @@
 
     <p class="address"> <%= @store.location_address %></p>
 
-    <!-- <p><a href="tel:<%= @store.display_phone %>" id="phone">
+    <p><a href="tel:<%= @store.display_phone %>" id="phone">
       <% if @store.display_phone != nil %>
       <%= @store.display_phone[3..-1] %>
       <% else %>
       <% end %>
     </a></p>
 
-    <p class="rating">Yelp Rating: <span id="rating_number"> <%= @store.rating %> </span> </p> -->
+    <p class="rating">Yelp Rating: <span id="rating_number"> <%= @store.rating %> </span> </p>
 
     <%= @store.snippet_text %>
 
