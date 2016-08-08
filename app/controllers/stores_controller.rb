@@ -2,12 +2,6 @@ class StoresController < ApplicationController
 
   def index
     @stores = Store.all
-    @baskin_robbins = Store.where("name like ?", "%Baskin%")
-    @dairy_queen = Store.where("name like ?", "%Dairy Queen%")
-    @yogen_fruz = Store.where("name like ?", "%Yogen%")
-    @menchies = Store.where("name like ?", "%Menchie%")
-    @laura_secord = Store.where("name like ?", "%Secord%")
-    @yogurtys = Store.where("name like ?", "%Yogurty%")
 
     gon.stores = @stores
     gon.baskin_robbins = @baskin_robbins
@@ -15,7 +9,7 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
-    # render layout: "showlayout"
+    render layout: "show"
   end
 
   private
