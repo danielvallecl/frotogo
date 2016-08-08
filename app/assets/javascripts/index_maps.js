@@ -101,13 +101,14 @@ function initIndexMap() {
 
       //Divs that Appear after Selection//
 
+      var store_id = query[i]["id"]
+
         $("#jquery_target").after(
-        '<div class="new_div">' +
+        '<div class="new_div"' + 'id="' + [store_id] + '">' +
         '<ul class="store_description">' +
-        '<li>Store Name:' + " " + query[i]["name"] + '</li>' +
-        '<li>Address:</li>' + query[i]["location_address"] +
-        '<li>Phone:</li>' + query[i]["display_phone"] +
-        '<li>Rating:</li> <img src=' + query[i]["rating_img_url"] + '>' +
+        '<li><b>' + query[i]["name"] + "</b>, " + query[i]["location_address"] + ", " + query[i]["location_city"] + '</li>' +
+        '<li>Phone: ' + query[i]["display_phone"] + '</li>' +
+        '<li>Yelp Rating: ' + ' <img src=' + query[i]["rating_img_url"] + '>' + '</li>' +
         '</ul>' +
         '</div>');
 
