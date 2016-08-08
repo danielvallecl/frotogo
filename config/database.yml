@@ -1,21 +1,18 @@
 
 development:
   adapter: postgresql
-  encoding: utf8
-  database: development
+  database: frotogo_development
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
-  encoding: utf8
-  database: test
+  database: frotogo_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  encoding: utf8
-  database: production
+  database: frotogo_production
   pool: 5
   timeout: 5000
