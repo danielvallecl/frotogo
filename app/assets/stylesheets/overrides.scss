@@ -1,5 +1,11 @@
+
+body {
+  font-family: 'Helvetica Neue';
+}
+
 body {
   background-color: #F9FFD2;
+  height: 100%;
 }
 
 #map {
@@ -8,12 +14,26 @@ body {
   border: 2px solid #999;
   border-radius: 10px;
   margin: auto;
+  position: fixed;
   box-shadow: inset 0 0 10px rgba(100,100,100,0.7);
 
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: 1069px) {
     width: 97%;
     height: 300px;
   }
+}
+
+#tagline {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 0.2px 0.2px 0.2px #000000;
+}
+
+#instructions {
+  color: white;
+  text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 .storedetail {
@@ -28,61 +48,76 @@ body {
 
 .biglogo {
   position: relative;
-  width: 40%;
-  max-width: 400px;
+  display: none;
+  width: 10%;
+  max-width: 300px;
   height: auto;
   margin: auto;
-  @media screen and (max-width: 549px) {
+  @media screen and (max-width: 579px) {
   width: 30%;
   }
 }
 
 .search_box_caption {
-    line-height: 0.75rem;
-    width: 80%;
+    line-height: 1em;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5px;
     position: relative;
-    top: 0; bottom: 0; right: 0; left: 0;
-    padding: 5px 10px 5px 5px;
-    border: 2px solid #999;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #223EA5;
+    font-size: 2.5em;
+    @media screen and (max-width: 579px) {
+    font-size: 1.25em;
+    }
+    /*border: 2px solid #999;
     border-bottom: 0px;
     border-left: 0px;
     border-top-right-radius: 10px;
     background: linear-gradient(to right,  #F9FFD2 0%, rgba(0, 158, 251, 0.35) 100%);
-    box-shadow: inset 0 5 0px rgba(100,100,100,0.7);
-    margin-bottom: -8px;
-    color: #223EA5;
+    box-shadow: inset 0 5 0px rgba(100,100,100,0.7);*/
   }
-  .caption_h6 {
-    font-family: 'Hind', sans-serif;
-    font-size: 1em;
-    @media screen and (max-width: 549px) {
-      font-size: 0.7em;
-    }
 
-  }
   .bigbox_h6 {
     text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
     color: white;
-    font-size: 1em;
-    @media screen and (max-width: 549px) {
+    font-size: 1.25em;
+    @media screen and (max-width: 579px) {
       font-size: 0.85em;
     }
   }
 
 .big_box {
-    width: 95%;
+    width: 75%;
+    height: auto;
+    position: relative;
+    top: 30px; bottom: 0; right: 0; left: 0;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 20px;
+    margin: auto;
+    background-color: #81d8d0;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.big_box_about {
+    width: 75%;
     height: auto;
     position: relative;
     top: 0; bottom: 0; right: 0; left: 0;
     padding: 10px;
+    padding-top: 20px;
     border: 2px solid #999;
-    border-radius: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     margin: auto;
-    background-color: #5CBFB6;
+    background-color: #FBCA37;
     box-shadow: inset 0 0 5px rgba(100,100,100,0.7);
 }
+
 
 .search_box {
     width: 50%;
@@ -94,7 +129,7 @@ body {
     border: 0;
     box-shadow: inset 0 0 0;
     margin: auto;
-    @media screen and (max-width: 999px) {
+    @media screen and (max-width: 1069px) {
     width: 100%;
   }
 
@@ -102,9 +137,10 @@ body {
     .boxtab {
       width: 95%;
       border-radius: 5px;
-      border: 1px solid #5CBFB6;
+      border: 1px solid #81d8d0;
       margin: -8px 0 5px 25px;
-      @media screen and (max-width: 549px) {
+      @media screen and (max-width: 579px) {
+      margin: -8px 0 5px 5px;
     }
   }
 
@@ -119,12 +155,12 @@ body {
     a {
       color: white;
       width: 100%;
-      height: 40px;
+      height: 35px;
       letter-spacing: 0.025rem;
       border-radius: 15px;
       outline: none;
       margin: 1px;
-      border: 2px solid #66A29D;
+      border: 2px solid #81d8d0;
       padding: 0.5rem 1rem;
     }
 
@@ -170,6 +206,13 @@ body {
       background: linear-gradient(to bottom,  #8D9BD0 0%,#122158 35%, #122158 75%,#273569 100%);
     }
 
+    .accordion-item:last-child:not(.is-active) > .accordion-title {
+      border: 2px solid #81d8d0;
+      border-radius: 15px;
+      height: 35px;
+    }
+
+
 
     .listjump {
       width: 65%;
@@ -180,7 +223,7 @@ body {
       float: left;
       padding: 3px;
       margin: -8px 0 10px 0;
-      @media screen and (max-width: 549px){
+      @media screen and (max-width: 579px){
         font-size: 0.8rem;
       }
     }
@@ -209,22 +252,14 @@ body {
       float: right;
       padding: 3px;
       margin: -8px 0 10px 0;
-      @media screen and (max-width: 549px){
+      @media screen and (max-width: 59px){
         font-size: 0.8rem;
       }
 
     }
 
-    .accordion-item:last-child:not(.is-active) > .accordion-title {
-      border: 2px solid #66A29D;
-      border-radius: 15px;
-      height: 40px;
-    }
 
 }
-
-
-
 
 
 .indexice {

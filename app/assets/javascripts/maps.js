@@ -9,6 +9,8 @@ function initShowMap() {
   var map = new google.maps.Map(include_map[0], {
     center: myLatLng,
     zoom: 13,
+    mapTypeControl: false,
+    scaleControl: false
   });
 
   var include_map = $("#map_show")

@@ -4,10 +4,10 @@
 
 
 <div class="search_box_caption">
-  <h6 class="caption_h6"><b>Seek out the frozen treats you crave with Toronto's Coolest Website!</b></h6>
+  <b id="tagline"> Seek out the frozen treats you crave with Toronto's Coolest Website!</b>
 </div>
 <div class="big_box">
-    <h6 class="bigbox_h6"><b>Click on a category below, select some stores, and... PRESTO!</b></h6>
+    <h6 class="bigbox_h6"><b id="instructions">Click on a category below, select some stores, and... PRESTO!</b></h6>
 <div class="search_box">
 <ul class="accordion" data-accordion data-allow-all-closed="true">
   <li class="accordion-item" data-accordion-item>
@@ -55,6 +55,11 @@
             </li>
             <li class="small-12 medium-6 large-4 xlarge-6 columns">
               <input type="checkbox" class="store_category box_12" name="selected[]" id="box_12" value="fugo" /> <label for="box_12">Fugo Desserts</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category box_13" name="selected[]" id="box_13" value="demetre" /> <label for="box_13">Caffe Demetre</label>
+            </li><li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category box_14" name="selected[]" id="box_14" value="junction" /> <label for="box_14">Ice Cream Junction</label>
             </li>
           </ul>
         </li>
@@ -117,6 +122,13 @@
             <li class="small-12 medium-6 large-4 xlarge-6 columns">
               <input type="checkbox" class="store_category" name="selected[]" id="box_12b" value="tsujiri" />
               <label for="box_12b">Tsujiri</label>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_13b" value="dekefir" />
+              <label for="box_13b">deKefir</label>
+            </li>
+            <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_14b" value="yoyo" />
+              <label for="box_14b">YoYo's Yogurt Cafe</label>
             </li>
             </li>
           </ul>
@@ -183,6 +195,13 @@
         <li class="small-12 medium-6 large-4 xlarge-6 columns">
               <input type="checkbox" class="store_category" name="selected[]" id="box_12c" value="grinning" />
           <label for="box_12c">Grinning Face</label>
+          <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_13c" value="arte" />
+          <label for="box_13c">Arte Gelato</label>
+        </li>
+        <li class="small-12 medium-6 large-4 xlarge-6 columns">
+              <input type="checkbox" class="store_category" name="selected[]" id="box_14c" value="lick it" />
+          <label for="box_14c">Lick It Gelato</label>
         </li>
         </ul>
         </li>
@@ -238,8 +257,8 @@
     </div>
   </li>
   </ul>
-  <button class="listjump"><img src="/assets/list.png"/ style="width: 16px; padding-bottom:2px;"><a href="#jquery_target" class="listjumpa">&nbsp;View selected in a list</a></button>
-
+<!--   <button class="listjump"><img src="/assets/list.png"/ style="width: 16px; padding-bottom:2px;"><a href="#jquery_target" class="listjumpa">&nbsp;View selected in a list</a></button>
+ -->
   <button class="mylocator"><img src="/assets/location.png" style="padding-bottom:3px;">&nbsp;Find Me</button>
 </div>
 
@@ -248,7 +267,7 @@
 <br/>
 </div>
 
-<div id="jquery_target">
+<div>
   <br />
   <br />
 </div>

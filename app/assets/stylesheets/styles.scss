@@ -5,7 +5,7 @@
 
 /*===================================*/
 html {
-  font-size: 62.5%;
+  font-size: 87.5%;
   background: linear-gradient(#ffb6c1, #ffe9ec);
 }
 
@@ -99,7 +99,7 @@ ul, li {
 
 #logo {
  display: none;
- font-size: 4.5em;
+ font-size: 3.5em;
  display: inline-block;
  color: white;
  font-family: 'Raleway', sans-serif;
@@ -143,7 +143,7 @@ ul, li {
   left: 5%;
   color: white;
   line-height: 35px;
-  font-size: 3.7em;
+  font-size: 3.2em;
   vertical-align: middle;
   font-family: 'Raleway', sans-serif;
   text-shadow: 0.2px 0.2px 0.2px #000000;
@@ -166,7 +166,7 @@ ul, li {
  position: absolute;
  top: 110px;
  left: 4%;
- font-size: 2.3em;
+ font-size: 1.9em;
  color: white;
  font-family: 'Helvetica Neue', sans-serif;
  font-weight: bold;
@@ -179,7 +179,7 @@ ul, li {
  left: 4%;
  font-family: 'Helvetica Neue', sans-serif;
  color: white;
- font-size: 2em;
+ font-size: 1.5em;
  font-weight: bold;
  transition: 0.2s;
  text-shadow: 0.2px 0.2px 0.2px #000000;
@@ -192,21 +192,26 @@ ul, li {
 
 #rating {
   position: absolute;
-  font-size: 2.0em;
+  font-size: 1.5em;
   top: 335px;
   left: 4%;
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
   text-shadow: 0.2px 0.2px 0.2px #000000;
+  transition: 0.1s;
+}
+
+#rating:hover {
+  color: red;
 }
 
 #store_image {
   position: relative;
   float: right;
-  top: 8px;
+  top: 12px;
   bottom: 30px;
-  height: 18%;
+  height: 17%;
   right: 5%;
   border-radius: 50%;
   border: 3px solid white;
@@ -214,9 +219,9 @@ ul, li {
 
 .rating_image {
   position: absolute;
-  top: 370px;
-  width: 20%;
-  left: 4%;
+  width: 110%;
+  left: 2%;
+  bottom: -15px;
 }
 
 #rating_number {
@@ -229,8 +234,8 @@ ul, li {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
   width: 40%;
-  font-size: 1.3em;
-  top: 235px;
+  font-size: 1em;
+  top: 220px;
   left: 4%;
   display: inline-block;
   color: black;
@@ -242,10 +247,10 @@ ul, li {
   display: inline;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1em;
   line-height: 16px;
   width: 40%;
-  top: 260px;
+  top: 240px;
   left: 4%;
   color: black;
   opacity: 0.7;
@@ -254,10 +259,11 @@ ul, li {
 }
 
 #yelp_reviews {
+  display: none;
   position: absolute;
   top: 190px;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   left: 4%;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
@@ -276,9 +282,9 @@ ul, li {
   position: absolute;
   display: inline-block;
   float: right;
-  height: 290px;
+  height: 280px;
   width: 47%;
-  top: 25%;
+  top: 27%;
   right: 4%;
   bottom: 1%;
   border-radius: 10px;
@@ -301,7 +307,7 @@ footer p {
   position: relative;
   top: 30px;
   left: 5%;
-  font-size: 1.4em;
+  font-size: 1em;
   color: white;
   opacity: 0.8;
 }
@@ -313,7 +319,7 @@ footer p {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  font-size: 1.9em;
+  font-size: 1.3em;
   color: #fefcf9;
   text-shadow: 0.5px 0.5px 1px #000000;
   opacity: 0.5;
@@ -343,20 +349,12 @@ footer p {
 .footer_menu a {
   color: white;
   font-size: 1.6em;
+  font-size: 1.1em;
   opacity: 0.7;
 }
 
 .footer_menu a:hover {
   opacity: 1;
-}
-
-.reviews_yelp {
-  font-size: 1.6em;
-  color: white;
-}
-
-.reviews_yelp:hover {
-  color: #e91e63;
 }
 
 #yelp {

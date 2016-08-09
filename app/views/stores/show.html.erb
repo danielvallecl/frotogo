@@ -18,11 +18,10 @@
       <% end %>
     </a></p>
 
-    <p id="rating">Yelp Rating: <span id="rating_number"> <%= @store.rating %> </span> </p>
-
     <p id="snippet_1"> Review Snippet: </p>
     <p id="snippet_2"> <%= @store.snippet_text %> </p>
 
+    <a href="<%= @store.url %>" id="rating">Yelp Rating: <%= @store.rating %></p>
     <%= image_tag @store.rating_img_url, class: "rating_image" %>
 
     <a href="<%= @store.url %>" id="yelp_reviews" target="_blank"> <%= @store.review_count %> Reviews on Yelp </a>

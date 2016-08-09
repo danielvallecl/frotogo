@@ -10,7 +10,9 @@ function initIndexMap() {
 
   var map = new google.maps.Map(include_map[0], {
     center: {lat: 43.6709, lng: -79.3859},
-    zoom: 12
+    zoom: 12,
+    mapTypeControl: false,
+    scaleControl: false
   });
 
   //Adds Geolocation Functionality //
