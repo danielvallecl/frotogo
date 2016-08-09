@@ -137,7 +137,7 @@ ul, li {
 
 #store_name {
   position: relative;
-  top: 20%;
+  top: 22%;
   left: 5%;
   color: white;
   line-height: 35px;
@@ -149,11 +149,11 @@ ul, li {
 
 #store_line {
   position: absolute;
-  left: 10px;
+  left: 25px;
   top: 80px;
-  width: 90%;
+  width: 100%;
   border: 0.5px solid rgba(255,255,255, 0.7);
-  width: 95%;
+  width: 90%;
 }
 
 .store_details {
@@ -163,22 +163,25 @@ ul, li {
 #address {
  position: absolute;
  top: 100px;
- left: 3%;
+ left: 4%;
  font-size: 2.3em;
  color: white;
  font-family: 'Helvetica Neue', sans-serif;
+ font-weight: bold;
  text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 #phone {
  position: absolute;
  top: 140px;
- left: 3%;
- font-family: 'Raleway', sans-serif;
+ left: 4%;
+ font-family: 'Helvetica Neue', sans-serif;
  color: white;
  font-size: 2em;
+ font-weight: bold;
  transition: 0.2s;
  text-shadow: 0.2px 0.2px 0.2px #000000;
+ transition: 0.2s;
 }
 
 #phone:hover {
@@ -189,9 +192,11 @@ ul, li {
   position: absolute;
   font-size: 2.0em;
   top: 345px;
-  left: 5.5%;
+  left: 5%;
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 #store_image {
@@ -221,7 +226,7 @@ ul, li {
   display: inline;
   width: 40%;
   font-size: 1.2em;
-  top: 250px;
+  top: 240px;
   left: 4%;
   color: white;
   display: inline-block;
@@ -233,7 +238,7 @@ ul, li {
   display: inline;
   width: 40%;
   font-size: 1.2em;
-  top: 270px;
+  top: 260px;
   left: 4%;
   color: white;
   display: inline-block;
@@ -243,14 +248,18 @@ ul, li {
 #yelp_reviews {
   position: absolute;
   top: 180px;
-  color: #d32323;
+  color: white;
   font-size: 2em;
-  left: 3%;
-  font-family: 'Raleway', sans-serif;
+  left: 4%;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-shadow: 0.2px 0.2px 0.2px #000000;
+  transition: 0.1s;
 }
 
 #yelp_reviews:hover {
-  color: #d32323;
+  color: #e81a3e;
+  text-decoration: underline;
 }
 
 /*================MAP STYLING====================*/
