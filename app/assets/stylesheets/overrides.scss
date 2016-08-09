@@ -10,12 +10,11 @@ body {
 
 #map {
   height: 400px;
-  width: 50%;
-  border: 2px solid #999;
-  border-radius: 10px;
+  width: 48%;
   margin: auto;
   position: fixed;
-  box-shadow: inset 0 0 10px rgba(100,100,100,0.7);
+  border-radius: 10px;
+  border: 1px solid white;
 
   @media screen and (max-width: 1069px) {
     width: 97%;
@@ -25,15 +24,16 @@ body {
 
 #tagline {
   font-family: 'Helvetica Neue', sans-serif;
-  color: white;
-  font-size: 1em;
+  margin-top: 20px;
+  color: #e91e63;
+  font-size: 0.7em;
   font-weight: bold;
-  text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 #instructions {
   color: white;
   text-shadow: 0.2px 0.2px 0.2px #000000;
+  font-size: 1em;
 }
 
 .storedetail {
@@ -93,9 +93,8 @@ body {
     width: 75%;
     height: auto;
     position: relative;
-    top: 30px; bottom: 0; right: 0; left: 0;
+    top: 20px; bottom: 0; right: 0; left: 0;
     padding: 10px;
-    border: 2px solid #999;
     border-radius: 20px;
     margin: auto;
     background-color: #81d8d0;
@@ -105,10 +104,11 @@ body {
 }
 
 .big_box_about {
-    width: 75%;
+    width: 60%;
     height: auto;
     position: relative;
     top: 0; bottom: 0; right: 0; left: 0;
+    font-size: 0.8em;
     padding: 10px;
     padding-top: 20px;
     border: 2px solid #999;
@@ -162,6 +162,7 @@ body {
       margin: 1px;
       border: 2px solid #81d8d0;
       padding: 0.5rem 1rem;
+      transition: 0.2s;
     }
 
     a:hover, a:focus {
@@ -236,6 +237,7 @@ body {
       margin: 0;
       border: 1px;
       padding: 0;
+      transition: 0.2s;
     }
 
       a.listjumpa:hover, a.listjumpa:focus {
