@@ -1,7 +1,7 @@
 
 /*==========LOADING FONTS============*/
 
-@import url('//fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Roboto|Cabin');
+@import url('//fonts.googleapis.com/css?family=Comfortaa|Raleway:700|Roboto|Cabin|Muli');
 
 /*===================================*/
 html {
@@ -35,6 +35,8 @@ ul, li {
 
 #logo_div {
  width: 200px;
+ position: relative;
+ top: 10px;
  margin: auto;
  }
 
@@ -122,73 +124,91 @@ ul, li {
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-#store_name {
-  color: white;
-  position: relative;
-  font-size: 5em;
-  margin-left: 1%;
-  font-family: 'Raleway', sans-serif;
-  text-shadow: 0.5px 0.5px 1px #000000;
-}
-
 .store_title {
-  position: relative;
+  position: absolute;
   display: inline-block;
   float: left;
-  left: 1%;
-  top: 1.5%;
-  width: 47%;
-  height: 450px;
+  width: 80%;
+  height: 110px;
+  line-height: 110px;
+  vertical-align: middle;
   border-radius: 10px;
+}
+
+#store_name {
+  position: relative;
+  top: 20%;
+  left: 5%;
+  color: white;
+  line-height: 35px;
+  font-size: 3.7em;
+  vertical-align: middle;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 0.2px 0.2px 0.2px #000000;
+}
+
+#store_line {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  width: 90%;
+  border: 0.5px solid rgba(255,255,255, 0.7);
+  width: 95%;
 }
 
 .store_details {
   height: 68%;
 }
 
-.address {
+#address {
  position: absolute;
- font-size: 2.5em;
+ top: 100px;
+ left: 3%;
+ font-size: 2.3em;
  color: white;
- font-family: 'Raleway', sans-serif;
+ font-family: 'Helvetica Neue', sans-serif;
+ text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 #phone {
  position: absolute;
- top: 200px;
+ top: 140px;
+ left: 3%;
+ font-family: 'Raleway', sans-serif;
  color: white;
  font-size: 2em;
  transition: 0.2s;
- text-shadow: 0.5px 0.5px 0.5px #000000;
+ text-shadow: 0.2px 0.2px 0.2px #000000;
 }
 
 #phone:hover {
- font-weight: bold;
+  text-decoration: underline;
 }
 
-.rating {
+#rating {
   position: absolute;
   font-size: 2.0em;
-  top: 335px;
-  left: 6%;
+  top: 345px;
+  left: 5.5%;
   color: white;
   font-family: 'Raleway', sans-serif;
-  text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 
 #store_image {
   position: relative;
-  bottom: 9%;
-  right: 5%;
   float: right;
+  top: 7px;
+  bottom: 30px;
+  height: 18%;
+  right: 3%;
   border-radius: 50%;
   border: 3px solid white;
 }
 
 .rating_image {
   position: absolute;
-  top: 370px;
-  width: 40%;
+  top: 380px;
+  width: 20%;
   left: 5%;
 }
 
@@ -196,19 +216,56 @@ ul, li {
   color: white;
 }
 
+#snippet_1 {
+  position: absolute;
+  display: inline;
+  width: 40%;
+  font-size: 1.2em;
+  top: 250px;
+  left: 4%;
+  color: white;
+  display: inline-block;
+  font-style: italic;
+}
+
+#snippet_2 {
+  position: absolute;
+  display: inline;
+  width: 40%;
+  font-size: 1.2em;
+  top: 270px;
+  left: 4%;
+  color: white;
+  display: inline-block;
+  font-style: italic;
+}
+
+#yelp_reviews {
+  position: absolute;
+  top: 180px;
+  color: #d32323;
+  font-size: 2em;
+  left: 3%;
+  font-family: 'Raleway', sans-serif;
+}
+
+#yelp_reviews:hover {
+  color: #d32323;
+}
+
 /*================MAP STYLING====================*/
 
 #map_show {
+  position: absolute;
   display: inline-block;
   float: right;
-  height: 350px;
-  width: 50%;
-  position: relative;
-  top: 12%;
-  right: 2%;
+  height: 300px;
+  width: 48%;
+  top: 25%;
+  right: 3%;
   bottom: 1%;
   border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  border: 1px solid white;
 }
 
 /*===============FOOTER STYLING=================*/
@@ -220,6 +277,7 @@ footer {
   height: 12%;
   line-height: 10%;
   background-color: rgba(8, 137, 158, 1);
+  box-shadow: 2px 2px 2px -2px rgba(0, 0, 0, .82);
 }
 
 footer p {

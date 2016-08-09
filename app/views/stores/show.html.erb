@@ -3,12 +3,13 @@
 
   <div class="store_title">
     <h1 id="store_name"><%= @store.name.titleize %></h1>
+</div>
+  <img src="<%= @store.image_url %>" id="store_image">
+  <hr id="store_line" />
 
     <div class="store_details">
 
-    <img src="<%= @store.image_url %>" id="store_image">
-
-    <p class="address"> <%= @store.location_address %></p>
+    <p id="address"> <%= @store.location_address %></p>
 
     <p><a href="tel:<%= @store.display_phone %>" id="phone">
       <% if @store.display_phone != nil %>
@@ -17,17 +18,16 @@
       <% end %>
     </a></p>
 
-    <p class="rating">Yelp Rating: <span id="rating_number"> <%= @store.rating %> </span> </p>
+    <p id="rating">Yelp Rating: <span id="rating_number"> <%= @store.rating %> </span> </p>
 
-    <%= @store.snippet_text %>
+    <p id="snippet_1"> Review: </p>
+    <p id="snippet_2"> <%= @store.snippet_text %> </p>
 
     <%= image_tag @store.rating_img_url, class: "rating_image" %>
 
-    <!-- <a href="<%= @store.url %>" target="_blank"> <span class="reviews_yelp"> <%= @store.review_count %> reviews on Yelp</span> </a> -->
+    <a href="<%= @store.url %>" id="yelp_reviews" target="_blank"> <%= @store.review_count %> reviews on Yelp </a>
 
   </div>
-
-</div>
 
   <div id="map_show" data-name = "<%= @store.name %>" data-latitude= "<%= @store.latitude %>" data-longitude= "<%= @store.longitude %>" data-location= "<%= @store.location_address %>" >
   </div>
