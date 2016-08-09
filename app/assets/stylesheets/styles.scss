@@ -153,7 +153,7 @@ ul, li {
   top: 80px;
   width: 100%;
   border: 0.5px solid rgba(255,255,255, 0.7);
-  width: 90%;
+  width: 92%;
 }
 
 .store_details {
@@ -202,10 +202,10 @@ ul, li {
 #store_image {
   position: relative;
   float: right;
-  top: 7px;
+  top: 8px;
   bottom: 30px;
   height: 18%;
-  right: 3%;
+  right: 5%;
   border-radius: 50%;
   border: 3px solid white;
 }
@@ -224,9 +224,10 @@ ul, li {
 #snippet_1 {
   position: absolute;
   display: inline;
+  font-family: 'Helvetica Neue', sans-serif;
   width: 40%;
-  font-size: 1.2em;
-  top: 240px;
+  font-size: 1.3em;
+  top: 230px;
   left: 4%;
   color: white;
   display: inline-block;
@@ -236,9 +237,10 @@ ul, li {
 #snippet_2 {
   position: absolute;
   display: inline;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.3em;
   width: 40%;
-  font-size: 1.2em;
-  top: 260px;
+  top: 250px;
   left: 4%;
   color: white;
   display: inline-block;
